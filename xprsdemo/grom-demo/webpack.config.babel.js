@@ -98,9 +98,22 @@ export default Object.assign({
     rules: [
       {
         test: /\.js/,
-        // exclude: /node_modules/,
-        include: __dirname + '/app/',
+        exclude: /node_modules/,
+        // include: __dirname + '/app/',
         loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modeules/,
+        use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+              },
+            },
+        ],
       },
       {
         test: /\.scss$/,
