@@ -12,7 +12,8 @@ import Notifier from './notifier';
 const app = express();
 const PORT = process.env.PORT || 8102;
 const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('eduvisors.db');
+const dbPath = path.resolve(__dirname, 'eduvisors.db');
+const db = new sqlite3.Database(dbPath);
 
 app.listen(PORT, () => console.log(`Server started at http://localhost:${PORT}`));
 
@@ -31,7 +32,13 @@ app.use(bodyParser.urlencoded({extended: true}));
  // ------------------------------------
  app.get('/api/test', (req, res) => {
        db.all("SELECT * from profile;",function(err,rows){
+         if (err){
+           console.log(err);
+           res.json({});
+         }
+         else {
            res.json(rows);
+         }
        });
  });
 // ------------------------------------

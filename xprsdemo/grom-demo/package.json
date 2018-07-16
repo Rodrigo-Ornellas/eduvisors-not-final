@@ -16,6 +16,7 @@
     "dist-server": "babel -d ./dist-server ./server -s",
     "start": "npm run dist-server && npm run dist && node ./dist-server/server.js"
   },
+  "proxy": "http://localhost:5000/",
   "dependencies": {
     "ajv": "^6.5.2",
     "babel-preset-stage-0": "^6.24.1",
