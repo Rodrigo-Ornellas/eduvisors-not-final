@@ -23,11 +23,13 @@ import Snowfall from './snowfall';
 import Weather from './weather';
 import Survey from './survey';
 import Home from './home';
-
 import Survey1 from './survey1';
 import Survey2 from './survey2';
 import Survey3 from './survey3';
 import Survey4 from './survey4';
+// ===============================
+import Section from 'grommet/components/Section';
+import Sidebar from 'grommet/components/Sidebar';
 
 class MainContent extends Component {
 
@@ -35,10 +37,13 @@ class MainContent extends Component {
   render() {
     return (
       <div className="wrapper">
-          <aside>
+
+          <Sidebar colorIndex='neutral-1'
+            fixed={true}>
               <Profile />
-          </aside>
-          <main>
+          </Sidebar>
+
+          <Section>
                 <Switch>
                       <Route path="/chart" component={Chart} />
                       <Route path="/cost" component={Costs} />
@@ -56,7 +61,7 @@ class MainContent extends Component {
                       <Route path="/survey3" component={Survey3} />
                       <Route path="/survey4" component={Survey4} />
                 </Switch>
-          </main>
+          </Section>
       </div>
     );
   }

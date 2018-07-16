@@ -22,32 +22,43 @@ import FieldStudy from './field_study';
 import Selector from './selector';
 import Snowfall from './snowfall';
 import Weather from './weather';
+// ==================================
+import Header from 'grommet/components/Header';
+import Title from 'grommet/components/Title';
+import Box from 'grommet/components/Box';
+import Menu from 'grommet/components/Menu';
+import Anchor from 'grommet/components/Anchor';
+// import Actions from 'grommet/components/Actions';
 
 
 class HeaderMenu extends Component {
   render() {
     return (
-      <div className="menu">
-        <header className="App-header">
-            {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            <h1 className="App-title">Eduvisors</h1>
-            <nav className="container">
-                <ul>
 
-                  <li><Link to="/cost">Cost</Link></li>
-                  <li><Link to="/engine">Engine</Link></li>
-
-                  <li><Link to="/profileCompletion">ProfileCompletion</Link></li>
-                  <li><Link to="/cost_living">Cost Living</Link></li>
-                  <li><Link to="/field_study">Field Study</Link></li>
-
-                  <li><Link to="/weather/BC">Weather</Link></li>
-                  <li><Link to="/survey1">Survey</Link></li>
-                  <li><Link to="/home">Home</Link></li>
-                </ul>
-            </nav>
-          </header>
-      </div>
+          <Header fixed={true}
+            size='medium'>
+            <Title>
+              Eduvisors
+            </Title>
+            <Box flex={true}
+              justify='end'
+              direction='row'
+              responsive={false}>
+              <Menu icon={<Menu />}
+                dropAlign={{"right": "right"}}>
+                <Anchor href='/home'
+                  className='active'>
+                  Home
+                </Anchor>
+                <Anchor href='/survey1'>
+                  Survey
+                </Anchor>
+                <Anchor href='/weather/BC'>
+                  Weather
+                </Anchor>
+              </Menu>
+            </Box>
+          </Header>
     );
   }
 }
