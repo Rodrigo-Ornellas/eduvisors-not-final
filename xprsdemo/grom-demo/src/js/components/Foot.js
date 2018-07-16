@@ -9,27 +9,38 @@ import {
 } from 'react-router-dom'
 
 import Footer from 'grommet/components/Footer';
+import Title from 'grommet/components/Title';
+import Box from 'grommet/components/Box';
+import Menu from 'grommet/components/Menu';
+import Anchor from 'grommet/components/Anchor';
+import Paragraph from 'grommet/components/Paragraph';
 
-<Footer justify='between'>
-  <Title>
-    <s />
-     Eduvisors
-  </Title>
-  <Box direction='row'
-    align='center'
-    pad={{"between": "medium"}}>
-    <Paragraph margin='none'>
-      © 2018 Eduvisors
-    </Paragraph>
-    <Menu direction='row'
-      size='small'
-      dropAlign={{"right": "right"}}>
-      <Anchor href='./home'>
-        Home
-      </Anchor>
-      <Anchor href='./test'>
-        About
-      </Anchor>
-    </Menu>
-  </Box>
-</Footer>
+
+class Foot extends Component {
+  render() {
+    return (
+
+        <Footer justify='between'>
+          <Box direction='row'
+            align='center'
+            pad={{"between": "medium"}}>
+            <Paragraph margin='none'>
+              © 2018 Eduvisors
+            </Paragraph>
+            <Menu direction='row'
+              size='small'
+              dropAlign={{"right": "right"}}>
+              <Anchor href="/">
+                Home
+              </Anchor>
+              <Anchor href='./test'>
+                About
+              </Anchor>
+            </Menu>
+          </Box>
+        </Footer>
+      )
+  }
+}
+
+export default Foot;

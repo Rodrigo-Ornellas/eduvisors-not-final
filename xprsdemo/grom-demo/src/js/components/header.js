@@ -28,36 +28,36 @@ import Title from 'grommet/components/Title';
 import Box from 'grommet/components/Box';
 import Menu from 'grommet/components/Menu';
 import Anchor from 'grommet/components/Anchor';
-// import Actions from 'grommet/components/Actions';
+// import { Menu } from 'grommet-icons';
 
 
 class HeaderMenu extends Component {
   render() {
     return (
 
-          <Header fixed={true}
-            size='medium'>
-            <Title>
-              Eduvisors
-            </Title>
-            <Box flex={true}
-              justify='end'
-              direction='row'
-              responsive={false}>
-              <Menu icon={<Menu />}
-                dropAlign={{"right": "right"}}>
-                <Anchor href='/home'
-                  className='active'>
-                  Home
-                </Anchor>
-                <Anchor href='/survey1'>
-                  Survey
-                </Anchor>
-                <Anchor href='/weather/BC'>
-                  Weather
-                </Anchor>
-              </Menu>
-            </Box>
+          <Header fixed={false} float={false}
+            size='small' colorIndex='neutral-1'>
+                <Title>
+                  Eduvisors
+                </Title>
+                <Box flex={true}
+                    justify='end'
+                    direction='row'
+                    responsive={false}>
+                  <Menu icon={<Menu />}
+                    dropAlign={{"right": "right"}}>
+                        <Anchor href='#'
+                            className='active'>
+                            Home
+                        </Anchor>
+                        <Anchor href='#'>
+                            Survey
+                        </Anchor>
+                        <Anchor href='#'>
+                            Weather
+                        </Anchor>
+                  </Menu>
+                </Box>
           </Header>
     );
   }

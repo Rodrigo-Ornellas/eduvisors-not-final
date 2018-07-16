@@ -514,17 +514,17 @@ app.get('/api/weather/:province', (req, res) => {
     db.all(`SELECT type AS label, jan AS Jan, feb as Feb, mar AS Mar, apr AS Apr, may AS May, jun AS Jun, jul AS Jul, aug as Aug, sep AS Sep, oct AS Oct, nov AS Nov, dec AS Dec FROM weather WHERE province='${req.params.province}' AND (type='snow' OR type = 'rain' OR type='temp_avg');`, function(err,rows)
             {
                 console.log('WEATHER SERVER > ', rows, err);
-                for (let j=0; j<3; j++ ){
-                      for(let i in rows[j]){
-                          if (i == 'label') {
-                            app.locals.weather[j].datasets.label = i.value;
-                          }
-                          else {
-                            app.locals.weather[j].datasets.data.push(i.value);
-                          }
-                      }
-                  }
-                  console.log(app.locals.weather);
+                // for (let j=0; j<3; j++ ){
+                //       for(let i in rows[j]){
+                //           if (i == 'label') {
+                //             app.locals.weather[j].datasets.label = i.value;
+                //           }
+                //           else {
+                //             app.locals.weather[j].datasets.data.push(i.value);
+                //           }
+                //       }
+                //   }
+                //   console.log(app.locals.weather);
                   res.json(rows);
 
             });
