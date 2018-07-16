@@ -71,7 +71,7 @@ if (env === 'production') {
     },
     historyApiFallback: true,
     proxy: {
-      '/api/*': 'http://localhost:8102'
+      '/api': { target: 'http://localhost:8102/'}
     }
   };
 }
@@ -104,7 +104,7 @@ export default Object.assign({
       },
       {
         test: /\.css$/,
-        exclude: /node_modeules/,
+        exclude: /node_modules/,
         use: [
             'style-loader',
             {

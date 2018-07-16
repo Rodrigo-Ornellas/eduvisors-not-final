@@ -20,15 +20,17 @@ class Weather extends Component {
             labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             datasets: [{
                   label: `Weather in ${this.props.province}`,
-                  // backgroundColor: 'rgb(255, 100, 0)',
+                  backgroundColor: 'rgb(255, 0, 0)',
                   data: [50, 40, 35, 20, 20, 10, 15, 180, 9, 8, 7, 5 ],
                       },
                       {
                   label: `Weather in 1`,
+                  backgroundColor: 'rgb(0, 50, 255)',
                   data: [0, 10, 5, 2, 200, 30, 45, 20, 18, 16, 14, 10 ],
                       },
                       {
                   label: `Weather in 2`,
+                  backgroundColor: 'rgb(255, 100, 10)',
                   data: [120, 30, 20, 12, 10, 40, 25, 30, 27, 24, 21, 150 ],
                 }] // end of DATASETS
           } // end of chartData
