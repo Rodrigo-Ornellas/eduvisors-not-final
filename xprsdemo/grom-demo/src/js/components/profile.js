@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import ProfileCompletion from './profileCompletion';
-// import '../styles/profile.css';
+
 
 
 
