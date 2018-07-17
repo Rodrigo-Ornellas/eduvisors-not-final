@@ -27,13 +27,15 @@ import Survey1 from './survey1';
 import Survey2 from './survey2';
 import Survey3 from './survey3';
 import Survey4 from './survey4';
-import Foot from './foot';
+import Aside from './Aside';
+
 // ===============================
 import Section from 'grommet/components/Section';
 import Sidebar from 'grommet/components/Sidebar';
 import Footer from 'grommet/components/Footer';
 import Split from 'grommet/components/Split';
 import Box from 'grommet/components/Box';
+
 
 class MainContent extends Component {
 
@@ -47,7 +49,7 @@ class MainContent extends Component {
             justify='center'
             align='center'
             pad='small'>
-                        <Profile />
+                        <Aside />
           </Box>
           <Box colorIndex='neutral-0'
             justify='center'
@@ -74,7 +76,7 @@ class MainContent extends Component {
       </Split>
 
 
-          <Foot />
+
 
       </div>
     );

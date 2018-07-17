@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 // import '../styles/App2.css';
 
 import App from 'grommet/components/App';
+import Header from 'grommet/components/Header';
 import Split from 'grommet/components/Split';
 
 import NavSidebar from './NavSidebar';
@@ -18,6 +19,9 @@ import NotFound from '../screens/NotFound';
 import HeaderMenu from './header';
 import MainContent from './mainorg';
 import Snowfall from './snowfall';
+
+import Foot2 from './Foot2';
+
 
 import {
   BrowserRouter as Router,
@@ -43,10 +47,12 @@ class Main extends Component {
       <div className="App">
 
       <Router>
+
           <div className="main-content">
 
                 <HeaderMenu />
                 <MainContent />
+                <Foot2 />
 
           </div>
        </Router>
