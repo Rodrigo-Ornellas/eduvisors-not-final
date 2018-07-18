@@ -22,17 +22,24 @@ class Profile extends Component {
 
   render() {
       return (
+
         <div className="profile">
               {this.state.profile.map(user =>
                   <div key={user.id}>
                   <h2>{user.first_name} {user.last_name}</h2>
+                  <h3>Profile Completion:</h3>
                   <ProfileCompletion />
                       <br />
+                      <div className="user-info">
                       <ul>
-                          <li>Email: {user.email}</li>
-                          <li>Field of Study: {user.fs}</li>
-                          <li>Level of Education: {user.ledu}</li>
+                          <li>Email:</li>
+                          <li>{user.email}</li>
+                          <li>Field of Study:</li>
+                          <li> {user.fs}</li>
+                          <li>Level of Education:</li>
+                          <li>{user.ledu}</li>
                       </ul>
+                    </div>
                  </div>
               )}
         </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import '../styles/main.css';
+// import 'grommet/scss/vanilla/index.css';
 
 import {
   BrowserRouter as Router,
@@ -30,11 +31,14 @@ import Survey4 from './survey4';
 import Aside from './Aside';
 
 // ===============================
-import Section from 'grommet/components/Section';
+
 import Sidebar from 'grommet/components/Sidebar';
 import Footer from 'grommet/components/Footer';
 import Split from 'grommet/components/Split';
 import Box from 'grommet/components/Box';
+import Article from 'grommet/components/Article';
+import Section from 'grommet/components/Section';
+import Headline from 'grommet/components/Headline';
 
 
 class MainContent extends Component {
@@ -42,38 +46,80 @@ class MainContent extends Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <div className="wrapper" >
 
-        <Split separator={false}>
-          <Box colorIndex='neutral-1'
-            justify='center'
-            align='center'
-            pad='small'>
-                        <Aside />
-          </Box>
-          <Box colorIndex='neutral-0'
-            justify='center'
-            align='center'
-            pad='large'>
-                <Switch>
-                      <Route path="/chart" component={Chart} />
-                      <Route path="/cost" component={Costs} />
-                      <Route path="/engine" component={Engine} />
-                      <Route path="/form" component={Register} />
-                      <Route path="/profileCompletion" component={ProfileCompletion} />
-                      <Route path="/cost_living" component={CostLiving} />
-                      <Route path="/snowfall/:province/:type" component={Snowfall} />
-                      <Route path="/weather/:province" component={Weather} />
-                      <Route path="/survey" component={Survey} />
-                      <Route path="/schoolProf/:schoolID" component={SchoolProf} />
-                      <Route path="/home" component={Home} />
-                      <Route path="/survey1" component={Survey1} />
-                      <Route path="/survey2" component={Survey2} />
-                      <Route path="/survey3" component={Survey3} />
-                      <Route path="/survey4" component={Survey4} />
-                </Switch>
-          </Box>
-      </Split>
+        {/* <Split separator={false}> */}
+
+<Aside />
+  <Article scrollStep={true}
+  controls={false}>
+
+  <Section pad='small'
+    justify='center'
+    align='center'
+    >
+    <Headline margin='none'>
+      Section 1
+    </Headline>
+    <Switch>
+          <Route path="/chart" component={Chart} />
+          <Route path="/cost" component={Costs} />
+          <Route path="/engine" component={Engine} />
+          <Route path="/form" component={Register} />
+          <Route path="/profileCompletion" component={ProfileCompletion} />
+          <Route path="/cost_living" component={CostLiving} />
+          <Route path="/snowfall/:province/:type" component={Snowfall} />
+          <Route path="/weather/:province" component={Weather} />
+          <Route path="/survey" component={Survey} />
+          <Route path="/schoolProf/:schoolID" component={SchoolProf} />
+          <Route path="/home" component={Home} />
+          <Route path="/survey1" component={Survey1} />
+          <Route path="/survey2" component={Survey2} />
+          <Route path="/survey3" component={Survey3} />
+          <Route path="/survey4" component={Survey4} />
+    </Switch>
+  </Section>
+  <Section pad='large'
+    justify='center'
+    align='center'
+    full='vertical'
+    colorIndex='grey-4'>
+    <Headline margin='none'>
+      Section 2
+    </Headline>
+  </Section>
+  <Section pad='large'
+    justify='center'
+    align='center'
+  >
+    <Headline margin='none'>
+      Section 3
+
+    </Headline>
+  </Section>
+  <Section pad='large'
+    justify='center'
+    align='center'
+
+    colorIndex='grey-4'>
+    <Headline margin='none'>
+      Section 4
+    </Headline>
+  </Section>
+  <Section pad='large'
+    justify='center'
+    align='center'
+    >
+    <Headline margin='none'>
+      Section 5
+    </Headline>
+  </Section>
+</Article>
+
+
+
+
+      {/* </Split> */}
 
 
 

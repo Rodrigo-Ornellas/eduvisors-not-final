@@ -14,6 +14,7 @@ import Title from 'grommet/components/Title';
 import Box from 'grommet/components/Box';
 import Menu from 'grommet/components/Menu';
 
+
 import Profile from './profile.js'
 
 
@@ -23,15 +24,13 @@ class Aside extends Component {
     return (
 
 
-            <Sidebar className="profile" colorIndex='neutral-1'>
+            <Sidebar className="profile" colorIndex='light-1' size='10%'>
         <Header pad='medium'
           justify='between'>
-          <Title>
-            Title
-          </Title>
+
         </Header>
-        <Box flex='grow'
-          justify='start'>
+        <Box
+          justify='center'>
           <Menu primary={true}>
             <Profile />
 

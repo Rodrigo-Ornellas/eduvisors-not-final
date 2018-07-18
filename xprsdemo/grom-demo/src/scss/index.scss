@@ -1,2 +1,57 @@
 @import '~grommet/scss/vanilla/index';
 // @import '~grommet/scss/hpe/index';
+
+
+#content .App .main-content .wrapper{
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  background-color: #5B62B9;
+  overflow: hidden;
+}
+
+.logo {
+  height:50px;
+  width: auto;
+  margin:1%;
+}
+
+
+.profile{
+  display: flex;
+  flex-flow : column nowrap;
+}
+.profile .user-info{
+  background-color: #606060;
+  margin:1%;
+  color:white;
+  width: 90%;
+  height:auto;
+
+
+
+}
+.profile .user-info ul{
+    list-style-type:none;
+    display:flex;
+    flex-flow:column wrap;
+    justify-content: center;
+
+}
+.profile h2{
+  text-align: center;
+  border-bottom: 2px solid black;
+  margin-left: 10%;
+  margin-righ: 10%;
+}
+.profile h3{
+  text-align: center;
+}
+
+.profile .user-info ul li:nth-of-type(odd){
+  border-bottom: 1px solid white;
+  margin:1%;
+}
+.profile .user-info ul li:nth-of-type(even){
+  margin:2%;
+}

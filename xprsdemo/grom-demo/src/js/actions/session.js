@@ -12,7 +12,7 @@ export function initialize() {
         type: SESSION_LOAD, payload: { email, name, token }
       });
     } else {
-      window.location = '/login';
+      // window.location = '/login';
     }
   };
 }
