@@ -1,4 +1,4 @@
-# grommet
+# eduvisors using grommet
 Eduvisors with GROMMET
 
 ### DETAILS
